@@ -62,21 +62,12 @@ class Robot
     name
   end
 
-  def self.existing_names
-    ROBOT_NAMES
-  end
-
   def name
     if @name == ''
       generate_name
-
-      while ROBOT_NAMES.include?(@name) || @name == 'AA000'
-        generate_name
-      end
-
+      generate_name while ROBOT_NAMES.include?(@name) || @name == 'AA000'
       ROBOT_NAMES << @name
     end
-
     @name
   end
 
