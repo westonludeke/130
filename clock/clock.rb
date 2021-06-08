@@ -40,7 +40,6 @@ ALGORITHM/PSEUDOCODE:
   default to 0.
 
 -When the "+" method is called:
-  ** Extract into 'Reduce 1440 method' method **
   -If mins argument is greater than 1440,
     -Loop: Reduce by 1440 and reassign to `num`.
 
@@ -54,7 +53,6 @@ ALGORITHM/PSEUDOCODE:
     -Repeat if updated minutes is still >= 60
 
 -When the "-" method is called:
-  ** Extract into 'Reduce 1440 method' method **
   -If the 'mins' argument is greater than 1440,
     -Loop: Reduce by 1440 and reassign to `num`.
 
@@ -71,7 +69,7 @@ class Clock
   end
 
   def self.at(hours, mins=0)
-    @clock = Clock.new(hours, mins)
+    Clock.new(hours, mins)
   end
 
   def convert_hours
